@@ -1,0 +1,52 @@
+<section class="cart_section">
+    <div class="container">
+        <h3>Cart</h3>
+        <div *ngIf="getCartDetails">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Image</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Sub Total</th>
+                        <th scope="col">Remove</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let book of getCartDetails">
+                        <td>
+                            <img src="{{book.img}}" width="50" alt="img">
+                        </td>
+                        <td>${{book.amt}}</td>
+                        <td>
+                            <button type="button" class="btn btn-primary" id="add_btn" (click)="incQty(book.bookId, book.qnt)"><strong>+</strong></button>
+                            <span>{{book.qnt}}</span>
+                            <button type="button" class="btn btn-primary" id="min_btn" (click)="decQty(book.bookId, book.qnt)"><strong>-</strong></button>
+                        </td>
+                        <td>
+                            ${{book.amt * book.qnt | number}}
+                        </td>
+                        <td>
+                            <a class="rem_item" (click)="removeItem(book.bookId)">
+                                <fa-icon [icon]="faTrash"></fa-icon>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <span><strong>Total-${{total | number}}</strong></span>
+                </div>
+                <div class="col-md-6 text-right">
+                    <button type="button" class="btn btn-md btn-warning rounded-0" (click)="removeAll()">
+                  <fa-icon [icon]="faTrash"></fa-icon>
+                  remove all
+                </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

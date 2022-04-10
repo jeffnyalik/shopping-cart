@@ -1,0 +1,43 @@
+.book {
+    padding: 40px 0;
+}
+
+.box {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn {
+    border-radius: 50%;
+    font-size: 16px;
+    color: #ffff;
+    margin: 08px;
+    background-color: brown;
+}
+
+.content h4 {
+    margin-top: 5px;
+}
+
+.content span {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.cart_button {
+    background: brown;
+    font-weight: 600;
+    font-size: 16px;
+    border: 1px solid rgba(94, 0, 0);
+    padding: 4px 16px;
+    color: #ffff;
+    border-radius: 4px;
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+
+.cart_button:hover {
+    color: rgba(94, 0, 0);
+    background: transparent;
+}

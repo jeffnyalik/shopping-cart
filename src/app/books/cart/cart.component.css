@@ -1,0 +1,24 @@
+.cart_section {
+    padding: 40px 0;
+}
+
+#add_btn {
+    border-radius: 50%;
+    font-size: 16px;
+    color: #ffff;
+    margin: 08px;
+    background-color: brown;
+}
+
+#min_btn {
+    border-radius: 50%;
+    font-size: 16px;
+    color: #ffff;
+    margin: 08px;
+    background-color: brown;
+}
+
+.rem_item {
+    cursor: pointer;
+    color: red;
+}
